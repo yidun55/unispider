@@ -16,6 +16,6 @@ NEWSPIDER_MODULE = 'unispider.spiders'
 DEFAULT_ITEM_CLASS = 'unispider.items.UnispiderItem'
 ITEM_PIPELINES = ['unispider.pipelines.UnispiderPipeline']
 
-LOG_FILE = '/home/dyh/data/mobile/log'
+# LOG_FILE = '/home/dyh/data/mobile/log'
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'unispider (+http://www.yourdomain.com)'

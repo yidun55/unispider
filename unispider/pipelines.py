@@ -7,13 +7,14 @@
 
 from scrapy import log
 import os
-os.chdir("/home/dyh/data/mobile")
+# os.chdir("/home/dyh/data/mobile")
 
 class UnispiderPipeline(object):
     def process_item(self, item, spider):
-        try:
-            with open("detail_norecord_mobile_num.txt","a") as f:
-                f.write(item["content"]+"\n")
-        except Exception,e:
-            log.msg("error pipeline,error_info=%s"%e, level=log.ERROR)
+        # try:
+        #     with open("detail_norecord_mobile_num.txt","a") as f:
+        #         f.write(item["content"]+"\n")
+        # except Exception,e:
+        #     log.msg("error pipeline,error_info=%s"%e, level=log.ERROR)
+        spider.file_handler.write(item['content'])
 
